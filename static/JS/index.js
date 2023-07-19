@@ -23,11 +23,9 @@ form.addEventListener('submit', async(event)=>{
     })
 
     let info = await response.json()
-
-    /*function submitAlert(){
-    if onclick="submitAlert()"
-}*/
 })
+
+
 
 
 

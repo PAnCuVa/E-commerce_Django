@@ -25,6 +25,18 @@
   </head>
 
   <body data-spy="scroll" data-target="#navbar" data-offset="65">
+    
+    <div class="container">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+              <button type"button" class="close" data-dismiss="alert">x</button>
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+    </div>
+    
     <!-- Header -->
     <nav
       id="header"
@@ -505,6 +517,7 @@
             <p class="text-danger small pt-0 mt-0">
               *Todos los campos son obligatorios
             </p>
+
             <form method="post">
               {% csrf_token %}
               <div class="row form-group">
@@ -547,7 +560,9 @@
                 >
                   Cancelar
                 </button>
-                <button type="submit" class="btn btn-hl">Acceder</button>
+                <button id="Acceder" type="submit" class="btn btn-hl">
+                  Acceder
+                </button>
               </div>
             </form>
           </div>

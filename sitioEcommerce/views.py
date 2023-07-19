@@ -3,6 +3,7 @@ from django.shortcuts import redirect
 
 from django.contrib import messages
 from django.contrib.auth import login
+from django.contrib.auth import logout
 from django.contrib.auth import authenticate
 
 
@@ -30,3 +31,7 @@ def login_view(request):
         'title':'Login'
     })
 
+def logout_view(request):
+    logout(request)
+    messages.success(request, 'Su sesión ha finalizado')
+    return redirect('login')
