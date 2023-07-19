@@ -1,0 +1,153 @@
+:root {
+    --blanco: #FFFFFF;
+    --oscuro: #000000;
+    --gris: #757575;
+    --secundario: #FFCE00;
+    --titles: rgb(30, 83, 114);
+    --footer: linear-gradient(90deg, rgb(28, 54, 67), rgb(39, 59, 71) 25%, rgb(30, 83, 114));
+}
+
+
+/* Globales */
+.text-hl {
+    color: var(--secundario) !important;
+}
+
+.btn-hl {
+    background-color: var(--secundario);
+    color: var(--oscuro);
+}
+
+.btn-hl:hover {
+    background-color: #CEB137;
+    color: #F5F0DB;
+}
+
+#header img {
+    width: 8rem;
+    padding: 0 20px;
+}
+
+
+/** Utilidades **/
+.w-sm-100 {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.align-der {
+    justify-content: flex-end;
+}
+
+
+/* Hero */
+#main .carousel-inner img {
+    max-height: 70vh;
+    object-fit: cover;
+    filter: grayscale(70%);
+}
+
+#hero {
+    position: relative;
+}
+
+#hero .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+    color: var(--blanco);
+}
+
+#hero .overlay .container,
+#hero .overlay .row {
+    height: 100%;
+}
+
+#dd-web {
+    background-color: #343a40;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #dd-web iframe {
+    max-width: 100%;
+  }
+
+  #productos .title,
+  #contacto .title {
+    color: var(--titles);
+  }
+
+
+/* Contacto */
+#formulario {
+    background-color: var(--gris);
+    width: min(50rem, 100%); /* Función que utiliza el valor más pequeño */
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+#formulario fieldset {
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        column-gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+
+/* Footer */
+#footer {
+    background: var(--footer); 
+}
+
+#footer a {
+    color: var(--blanco);
+}

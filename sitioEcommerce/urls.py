@@ -17,9 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from . import views
+
 urlpatterns = [
+    path('', views.index, name="index"),
+    path("users/login", views.login_view, name="login"),
     path('admin/', admin.site.urls),
-    path('categories/', include('products_and_services.urls')),
-    path('productrating/', include('products_and_services.urls')),
-    path('products/', include('products_and_services.urls'))
+    path('categories/', 
+         include('products_and_services.urls')),
+    path('productrating/',
+         include('products_and_services.urls')),
+    path('products/',
+         include('products_and_services.urls')),
+    path('contact/',
+         include('processes.urls'))     
 ]
