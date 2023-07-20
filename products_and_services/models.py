@@ -29,12 +29,4 @@ class Products (models.Model):
         return f'{self.product_name}'
 
 
-#class Shopping_Cart (models.Model):
-    #doc_number
-    #product = models.ManyToManyField(Products, blank=True)
-    #quantity = models.PositiveIntegerField()
-    #cart_creation_date = models.DateField(auto_now_add=True)
-    #cart_status = models.CharField(max_length=20)
-
-    #def __str__(self):
-        #return f'{self.category_name}'
+ 
